@@ -7,4 +7,5 @@ interface ApiRequestView {
     fun showPost(post: Post)
     fun showProgressBar()
     fun hideProgressBar()
+    fun showErrorMessage(message: String)
 }

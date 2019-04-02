@@ -40,4 +40,8 @@ class ApiRequestActivity : AppCompatActivity(), ApiRequestView {
     override fun hideProgressBar() {
         progressBar.visibility = View.GONE
     }
+
+    override fun showErrorMessage(message: String) {
+        errorTextView.text = message
+    }
 }
