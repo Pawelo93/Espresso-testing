@@ -19,6 +19,9 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.Mock
+import org.mockito.Mockito.`when` as whenever
+import org.mockito.MockitoAnnotations
 
 @RunWith(AndroidJUnit4::class)
 class ApiRequestActivityTest {
@@ -26,7 +29,7 @@ class ApiRequestActivityTest {
     @get:Rule
     var activityRule = ActivityTestRule(ApiRequestActivity::class.java, true, false)
 
-    var getOnePostUseCase: GetOnePostUseCase = mockk()
+    val getOnePostUseCase: GetOnePostUseCase = mockk()
     val presenter = ApiRequestPresenter(getOnePostUseCase, TestTransformer())
 
     @Before

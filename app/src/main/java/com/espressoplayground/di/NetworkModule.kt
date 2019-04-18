@@ -1,5 +1,6 @@
 package com.espressoplayground.di
 
+import com.espressoplayground.base.BaseUrlChangingInterceptor
 import com.espressoplayground.network.ApiService
 import dagger.Module
 import dagger.Provides
@@ -26,9 +27,17 @@ open class NetworkModule {
 
     @Provides
     @Singleton
-    fun httpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun baseUrlChangingInterceptor() = BaseUrlChangingInterceptor()
+
+    @Provides
+    @Singleton
+    fun httpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        baseUrlChangingInterceptor: BaseUrlChangingInterceptor
+    ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            .addInterceptor(baseUrlChangingInterceptor)
             .build()
     }
 

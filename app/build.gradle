@@ -14,8 +14,8 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "com.espressoplayground.utils.MockTestRunner"
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "com.espressoplayground.utils.MockTestRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
     }
     buildTypes {
@@ -23,6 +23,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -33,12 +37,14 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
 //    implementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
-//    testImplementation "org.mockito:mockito-android:2.24.5"
-//    testImplementation "org.mockito:mockito-inline:2.13.0"
+    androidTestImplementation "org.mockito:mockito-android:2.26.0"
+//    implementation 'com.github.tmurakami:dexopener:2.0.1'
+
+//    testImplementation "org.mockito:mockito-inline:2.16.0"
 //    implementation "org.mockito:mockito-inline:2.16.0"
 
     def mockkVersion = "1.9.2"
-    testImplementation "io.mockk:mockk:$mockkVersion"
+//    testImplementation "io.mockk:mockk:$mockkVersion"
     androidTestImplementation "io.mockk:mockk-android:$mockkVersion"
 
     // rxjava 2
@@ -66,4 +72,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestUtil 'androidx.test:orchestrator:1.1.1'
+
+    // wiremock
+    androidTestImplementation("com.github.tomakehurst:wiremock:2.18.0") {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        exclude group: 'asm', module: 'asm'
+        exclude group: 'org.json', module: 'json'
+        exclude group: 'com.google.guava', module:'guava'
+    }
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
 }
