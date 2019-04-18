@@ -1,4 +1,4 @@
-package com.espressoplayground.utils
+package com.espressoplayground.base.utils
 
 import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.plugins.RxJavaPlugins

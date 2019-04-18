@@ -1,4 +1,4 @@
-package com.espressoplayground.apiRequest
+package com.espressoplayground._2_apiRequest
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -8,7 +8,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
 import com.espressoplayground.R
 import com.espressoplayground.base.TestApp
-import com.espressoplayground.base.TestTransformer
+import com.espressoplayground.base.utils.TestTransformer
 import com.espressoplayground.network.Post
 import dagger.android.AndroidInjector
 import io.mockk.every

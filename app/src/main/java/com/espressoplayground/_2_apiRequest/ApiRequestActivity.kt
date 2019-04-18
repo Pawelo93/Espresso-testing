@@ -1,4 +1,4 @@
-package com.espressoplayground.apiRequest
+package com.espressoplayground._2_apiRequest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

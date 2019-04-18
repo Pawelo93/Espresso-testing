@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.espressoplayground.R
-import com.espressoplayground.apiRequest.ApiRequestActivity
-import com.espressoplayground.simpleAsync.SimpleAsyncActivity
+import com.espressoplayground._2_apiRequest.ApiRequestActivity
+import com.espressoplayground._1_simpleAsync.SimpleAsyncActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

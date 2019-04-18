@@ -1,4 +1,4 @@
-package com.espressoplayground.base
+package com.espressoplayground.base.di
 
 import com.espressoplayground.network.ApiService
 import com.espressoplayground.network.Post

@@ -1,8 +1,8 @@
-package com.espressoplayground.apiRequest
+package com.espressoplayground._2_apiRequest
 
 import com.espressoplayground.base.BasePresenter
 import com.espressoplayground.rx.RxTransformer
-import com.espressoplayground.utils.applySchedulers
+import com.espressoplayground.base.utils.applySchedulers
 import javax.inject.Inject
 
 open class ApiRequestPresenter @Inject constructor(

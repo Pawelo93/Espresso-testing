@@ -1,16 +1,12 @@
-package com.espressoplayground.base
+package com.espressoplayground.base.di
 
 import com.espressoplayground.di.ActivityModule
 import com.espressoplayground.di.MainAppComponent
-import com.espressoplayground.di.NetworkModule
 import com.espressoplayground.main.MainApplication
-import com.espressoplayground.simpleAsync.SimpleAsyncActivityTest
+import com.espressoplayground._1_simpleAsync.SimpleAsyncActivityTest
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
-import io.reactivex.Scheduler
-import io.reactivex.schedulers.Schedulers
-import io.reactivex.schedulers.TestScheduler
 import javax.inject.Singleton
 
 @Singleton

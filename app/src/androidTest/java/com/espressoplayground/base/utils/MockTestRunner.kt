@@ -1,4 +1,4 @@
-package com.espressoplayground.utils
+package com.espressoplayground.base.utils
 
 import android.app.Application
 import android.content.Context

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        tools:context=".apiRequest.ApiRequestActivity">
+        tools:context="._2_apiRequest.ApiRequestActivity">
 
     <TextView
             android:id="@+id/titleTextView"

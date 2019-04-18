@@ -1,8 +1,8 @@
-package com.espressoplayground.simpleAsync
+package com.espressoplayground._1_simpleAsync
 
 import com.espressoplayground.base.BasePresenter
 import com.espressoplayground.rx.RxTransformer
-import com.espressoplayground.utils.applySchedulers
+import com.espressoplayground.base.utils.applySchedulers
 import io.reactivex.Single
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject

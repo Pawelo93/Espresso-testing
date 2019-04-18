@@ -14,7 +14,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "com.espressoplayground.utils.MockTestRunner"
+        testInstrumentationRunner "com.espressoplayground.base.utils.MockTestRunner"
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
     }

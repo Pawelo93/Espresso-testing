@@ -1,8 +1,8 @@
 package com.espressoplayground.di
 
-import com.espressoplayground.apiRequest.ApiRequestActivity
+import com.espressoplayground._2_apiRequest.ApiRequestActivity
 import com.espressoplayground.main.MainActivity
-import com.espressoplayground.simpleAsync.SimpleAsyncActivity
+import com.espressoplayground._1_simpleAsync.SimpleAsyncActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

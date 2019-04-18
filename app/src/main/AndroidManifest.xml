@@ -12,9 +12,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".apiRequest.ApiRequestActivity">
+        <activity android:name="._2_apiRequest.ApiRequestActivity">
         </activity>
-        <activity android:name=".simpleAsync.SimpleAsyncActivity">
+        <activity android:name="._1_simpleAsync.SimpleAsyncActivity">
         </activity>
         <activity android:name=".main.MainActivity">
             <intent-filter>

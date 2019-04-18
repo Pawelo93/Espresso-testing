@@ -1,4 +1,4 @@
-package com.espressoplayground.utils
+package com.espressoplayground.base.utils
 
 import com.espressoplayground.rx.RxTransformer
 import io.reactivex.Completable
