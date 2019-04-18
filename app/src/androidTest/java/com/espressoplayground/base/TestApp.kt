@@ -16,5 +16,5 @@ class TestApp : MainApplication() {
             .inject(this)
     }
 
-    override fun activityInjector() = injector
+    override fun activityInjector() = if(::injector.isInitialized) injector else activityInjector
 }
