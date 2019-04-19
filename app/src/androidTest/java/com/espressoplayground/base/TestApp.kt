@@ -1,6 +1,7 @@
 package com.espressoplayground.base
 
 import android.app.Activity
+import com.espressoplayground.base.di.DaggerTestAppComponent
 import com.espressoplayground.main.MainApplication
 import dagger.android.AndroidInjector
 

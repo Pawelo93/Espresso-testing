@@ -5,16 +5,17 @@ import com.espressoplayground.rx.RxTransformer
 import com.espressoplayground.base.utils.applySchedulers
 import javax.inject.Inject
 
-open class ApiRequestPresenter @Inject constructor(
+class ApiRequestPresenter @Inject constructor(
     private val getOnePostUseCase: GetOnePostUseCase,
     private val rxTransformer: RxTransformer
 ) : BasePresenter<ApiRequestView>() {
 
-    open fun makeApiCall() {
+    fun makeApiCall() {
         getOnePostUseCase()
             .applySchedulers(rxTransformer)
             .subscribe({
                 view?.showPost(it)
+                view?.hideProgressBar()
             }, {
                 view?.hideProgressBar()
                 view?.showErrorMessage(it.message ?: "")

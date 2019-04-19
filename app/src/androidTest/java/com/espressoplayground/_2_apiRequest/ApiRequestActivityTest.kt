@@ -26,7 +26,7 @@ class ApiRequestActivityTest {
     @get:Rule
     var activityRule = ActivityTestRule(ApiRequestActivity::class.java, true, false)
 
-    var getOnePostUseCase: GetOnePostUseCase = mockk()
+    val getOnePostUseCase: GetOnePostUseCase = mockk()
     val presenter = ApiRequestPresenter(getOnePostUseCase, TestTransformer())
 
     @Before
@@ -48,6 +48,8 @@ class ApiRequestActivityTest {
             .check(matches(withText("Post title")))
         onView(withId(R.id.bodyTextView))
             .check(matches(withText("Post body")))
+        onView(withId(R.id.progressBar))
+            .check(matches(not(isDisplayed())))
     }
 
     @Test
