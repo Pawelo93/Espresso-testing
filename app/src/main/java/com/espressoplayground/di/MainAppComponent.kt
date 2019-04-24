@@ -1,8 +1,8 @@
 package com.espressoplayground.di
 
 import com.espressoplayground.main.MainApplication
-import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
@@ -13,14 +13,7 @@ import javax.inject.Singleton
     NetworkModule::class,
     AndroidSupportInjectionModule::class
 ])
-interface MainAppComponent {
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun application(applicatiion: MainApplication): Builder
-
-        fun build(): MainAppComponent
-    }
-
-    fun inject(app: MainApplication)
+interface MainAppComponent : AndroidInjector<MainApplication> {
+    @Component.Factory
+    abstract class Builder : AndroidInjector.Factory<MainApplication>
 }

@@ -11,9 +11,8 @@ class TestApp : MainApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerTestAppComponent.builder()
-            .application(this)
-            .build()
+        DaggerTestAppComponent.factory()
+            .create(this)
             .inject(this)
     }
 
