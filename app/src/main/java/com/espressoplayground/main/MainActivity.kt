@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.espressoplayground.R
 import com.espressoplayground._2_apiRequest.ApiRequestActivity
 import com.espressoplayground._1_simpleAsync.SimpleAsyncActivity
+import com.espressoplayground._3_openActivity.FirstActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
         apiRequestButton.setOnClickListener {
             startActivity(Intent(this, ApiRequestActivity::class.java))
+        }
+
+        openActivityButton.setOnClickListener {
+            startActivity(Intent(this, FirstActivity::class.java))
         }
     }
 }
