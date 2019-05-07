@@ -1,6 +1,7 @@
 package com.espressoplayground.base.di
 
 import android.content.Context
+import com.espressoplayground.base.TestApp
 import com.espressoplayground.base.utils.TestTransformer
 import com.espressoplayground.main.MainApplication
 import com.espressoplayground.rx.RxTransformer
@@ -12,7 +13,7 @@ import javax.inject.Singleton
 class TestAppModule {
 
     @Provides
-    fun applicationContext(app: MainApplication): Context {
+    fun applicationContext(app: TestApp): Context {
         return app
     }
 
