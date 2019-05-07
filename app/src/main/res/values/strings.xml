@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EspressoPlayground</string>
+    <string name="empty_password_error">Wpisz hasło</string>
 </resources>

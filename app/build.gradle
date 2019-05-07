@@ -24,6 +24,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    project.ext {
+        orchestrator = project.hasProperty('orchestrator') ? project.property('orchestrator') : false
+    }
+    testOptions {
+        if (orchestrator == true) {
+            println("With android test orchestrator")
+            execution "ANDROID_TEST_ORCHESTRATOR"
+        }
+    }
 }
 
 dependencies {

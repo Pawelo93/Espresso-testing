@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView"/>
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"/>
 
     <TextView
             android:visibility="gone"
@@ -34,7 +34,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/bodyTextView"/>
+            app:layout_constraintTop_toBottomOf="@id/bodyTextView"/>
 
     <ProgressBar
             android:id="@+id/progressBar"
@@ -45,6 +45,6 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/errorTextView"/>
+            app:layout_constraintTop_toBottomOf="@id/errorTextView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
