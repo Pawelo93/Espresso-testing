@@ -11,7 +11,6 @@ import androidx.test.espresso.intent.Intents.*
 import androidx.test.espresso.intent.matcher.IntentMatchers.*
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import com.espressoplayground._4_robot.NextRobotActivity
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.anything
 

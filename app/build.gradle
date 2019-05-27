@@ -17,7 +17,13 @@ android {
         testInstrumentationRunner "com.espressoplayground.base.utils.MockTestRunner"
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
+
+
     }
+    useLibrary 'android.test.runner'
+
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
     buildTypes {
         release {
             minifyEnabled false
@@ -27,11 +33,16 @@ android {
     project.ext {
         orchestrator = project.hasProperty('orchestrator') ? project.property('orchestrator') : false
     }
+
+    testOptions.unitTests.includeAndroidResources = true
+
     testOptions {
-        if (orchestrator == true) {
-            println("With android test orchestrator")
-            execution "ANDROID_TEST_ORCHESTRATOR"
-        }
+//        if (orchestrator == true) {
+//            println("With android test orchestrator")
+//            execution "ANDROID_TEST_ORCHESTRATOR"
+//        }else {
+//            println("Without orchestrator")
+//        }
     }
 }
 
@@ -71,9 +82,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.12.1"
 
     // espresso
-    androidTestImplementation 'androidx.test:runner:1.1.2-alpha2'
-    androidTestImplementation 'androidx.test:rules:1.1.2-alpha02'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-beta01'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
     androidTestUtil 'androidx.test:orchestrator:1.1.1'

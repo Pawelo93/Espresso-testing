@@ -8,13 +8,16 @@ import kotlinx.android.synthetic.main.activity_first.*
 
 class FirstActivity : AppCompatActivity() {
 
+    companion object {
+        const val NAME_EXTRA = "name"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
 
         openSecondActivityButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("name", "Wacek")
+            intent.putExtra(NAME_EXTRA, nameEditText.text.toString())
             startActivity(intent)
         }
     }

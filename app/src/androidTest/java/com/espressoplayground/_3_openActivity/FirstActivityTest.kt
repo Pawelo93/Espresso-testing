@@ -3,6 +3,7 @@ package com.espressoplayground._3_openActivity
 import android.content.ComponentName
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasExtra
@@ -29,9 +30,12 @@ class FirstActivityTest {
 
     @Test
     fun openSecondActivityWithProperUserName() {
+        val name = "Wacek"
+        onView(withId(R.id.nameEditText))
+            .perform(typeText(name))
         onView(withId(R.id.openSecondActivityButton))
             .perform(click())
         intended(hasComponent(ComponentName(intentsTestRule.activity, SecondActivity::class.java)))
-        intended(hasExtra("name", "Wacek"))
+        intended(hasExtra(FirstActivity.NAME_EXTRA, name))
     }
 }

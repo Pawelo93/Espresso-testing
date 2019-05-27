@@ -1,13 +1,8 @@
 package com.espressoplayground.robots
 
-import android.content.ComponentName
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.intent.Intents.intending
-import androidx.test.espresso.intent.matcher.IntentMatchers
-import androidx.test.espresso.intent.matcher.IntentMatchers.*
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import com.espressoplayground.R
-import com.espressoplayground._3_openActivity.SecondActivity
 
 class LoginRobot : BaseTestRobot() {
 
@@ -20,8 +15,4 @@ class LoginRobot : BaseTestRobot() {
     fun matchErrorText(err: String) = matchText(textView(R.id.errorMessageTextView), err)
 
     fun isErrorTextVisible() = textView(R.id.errorMessageTextView).check(matches(isDisplayed()))
-
-//    fun isActivityLaunched() = intending(
-//        hasComponent(ComponentName(intentsTestRule.activity, SecondActivity::class.java))
-//    )
 }

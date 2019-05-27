@@ -3,18 +3,19 @@ package com.espressoplayground._4_robot
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.espressoplayground.R
 import dagger.android.AndroidInjection
-import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_robot.*
 import javax.inject.Inject
 
-class RobotActivity : DaggerAppCompatActivity(), RobotView {
+class RobotActivity : AppCompatActivity(), RobotView {
 
     @Inject
     lateinit var presenter: RobotPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_robot)
 
